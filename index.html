@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="styles/style.css" rel="stylesheet"> -->
+	<title>Politsei e-avaldus</title>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<div class="table-responsive table-striped">
+				<table class="table" cellspacing='0'>
+					<thead>
+						<p>* - märgitud väljad on kohustuslikud </p>
+						<p>** - märgitud väljadest üks on kohustuslik (täida isikukood või sünniaeg)</p>
+							<tr>
+								<th id="muutus" colspan="4">TEATAJA</th>
+							</tr><!-- Table HEADER -->						
+					</thead> 
+					<tbody>
+							<tr>
+								<td>Eesnimi*</td>
+								<td><input type="text" name="Eesnimi" placeholder="Eesnimi" required/></input></td>
+								<td>Perekonnanimi*</td>
+								<td><input type="text" name="Perekonnanimi" placeholder="Perekonnanimi" required/></input></td>
+
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<td>Isikukood**</td>
+								<td><input type="text" name="Isikukood" placeholder="Isikukood" required/></td>
+								<td>Sünniaeg**</td>
+								<td><input type="text" name="Sünniaeg" placeholder="Sünniaeg" required/></td>
+								
+							</tr><!-- Table Row -->
+
+							<tr>
+								<td><font color="red">Amet</font></td>
+								<td><input type="text" name="Amet" placeholder="Amet" required/></td>
+								<td><font color="red">Kodakondsus</font></td>
+								<td><input type="text" name="Kodakondsus" placeholder="Kodakondsus" required/></td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<td>Elukoha aadress (tänav, maja nr, korter, linn)</td>
+								<td colspan="3"><input id="address" type="text" name="Aadress" placeholder="Aadress" required/></td>
+							</tr><!-- Table Row -->
+							
+						    <tr>
+								<td>Sihtnumber</td>
+								<td><input type="text" name="Sihtnumber" placeholder="Sihtnumber" required/></td>
+								<td>Maakond</td>
+								<td><input type="text" name="Maakond" placeholder="Maakond" required/></td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<td>Sobiv viis kontakteerumiseks</td>
+								<td><select name="sex">
+								<option value="man">e-kirja teel</option> 
+								<option value="woman" selected>telefoni teel</option>
+								</select></td>
+								<td><font color="red">Sobiv aeg kontakteerumiseks</font></td>
+								<td><input type="text" name="Maakond" placeholder="Sobiv aeg kontakteerumiseks" required/></td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<td>E-post*</td>
+								<td><input type="text" name="E-post" placeholder="E-post" required/></td>
+								<td>Telefon*</td>
+								<td><input type="text" name="Telefon" placeholder="Telefon" required/></td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<th id="muutus" colspan="4">SÜNDMUSE TOIMUMISE AEG</th>
+							</tr><!-- Table HEADER -->
+							
+							<tr>
+								<td>Kuupäev*</td>
+								<td><input type="text" name="Kuupäev" placeholder="Kuupäev" required/></td>
+								<td>Kellaaeg*</td>
+								<td><input type="text" name="Kellaaeg" placeholder="Kellaaeg" required/></td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<th id="muutus" colspan="4">SÜNDMUSE TOIMUMISE KOHT</th>
+							</tr><!-- Table HEADER -->
+							
+							<tr>
+								<td>Prefektuur*</td>
+								<td><select name="sex">
+								<option value="selection">Üldine kontakt</option> 
+								<option value="selection" selected>Põhja prefektuur</option>
+								<option value="selection">Lõuna prefektuur</option> 
+								<option value="selection" selected>Ida prefektuur</option>
+								<option value="selection" selected>Lääne prefektuur</option>
+								</select></td>
+								<td>Riik*</td>
+								<td><select name="sex">
+								<option value="man">-</option> 
+								<option value="woman" selected>Eesti</option>
+								</select></td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<td>Aadress*</td>
+								<td colspan="3"><input id="address" type="text" name="Aadress" placeholder="Aadress" required/></td>
+								</tr>
+								<tr>
+								<td>Toimumise koht (nt park, kauplus, internet vms)*</td>
+								<td colspan="3"><input id="address" type="text" name="Toimumise koht" placeholder="Toimumise koht" required/></td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<th id="muutus" colspan="4">TOIMUNU KIRJELDUS*</th>
+							</tr><!-- Table HEADER -->
+							
+							<tr>
+								<td colspan="4"><input id="TOIMUNUKIRJELDUS" type="text" name="TOIMUNU KIRJELDUS" placeholder="TOIMUNU KIRJELDUS" required/></td>
+							</tr>
+							
+							<tr>
+								<td>Tekitatud varaline kahju</td>
+								<td colspan="3"><input type="text" name="€ " placeholder="€ " required/></td>
+							</tr>
+							
+							<tr>
+								<th id="muutus" colspan="2">ÄRA VÕETUD/VIIDUD/SAAMATA JÄÄNUD VARA</th>
+								<th id="muutus" colspan="2">SÜÜTEO TOIME PANNUD ISIKU(TE) ANDMED</th>
+							</tr><!-- Table HEADER -->
+							
+							<td colspan="2" id="muutus">
+								<button type="submit">Lisa vara</button>
+							</td><!-- BUTTON -->
+
+							<td colspan="2" id="muutus">
+								<button type="submit">Lisa isik</button>
+							</td><!-- BUTTON -->
+							
+							<tr>
+								<th id="muutus" colspan="4">TUNNISTAJA(TE) ANDMED</th>
+							</tr><!-- Table HEADER -->
+							
+							<td colspan="4" id="muutus">
+								<button type="submit">Lisa tunnistaja</button>
+							</td><!-- BUTTON -->
+							
+							<tr>
+								<th id="muutus" colspan="4">TÄIENDAVAD ANDMED</th>
+							</tr><!-- Table HEADER -->
+							
+							<!-- Check Information -->
+							<tr>
+								<td colspan="4"><input type="checkbox" checked></input>Olen nõus kokkuleppemenetlusega
+									Kokkuleppemenetlus on menetluse liik, mille käigus nõustuvad süüdistatav ja tema kaitsja süüdistuse sisu ja kuriteo kvalifikatsiooni, kuriteoga tekitatud kahju laadi<p>
+									ja suurusega ning jõuavad kokkuleppele prokuröri poolt kohtus nõutava karistuse liigis ja määras</td>
+							</tr><!-- Table Row -->
+
+							<tr>
+								<td colspan="4"><input type="checkbox" checked></input>Olen nõus, et menetlusega seotud dokumendid edastatakse minu poolt antud e-posti aadressile</td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<td colspan="4"><input type="checkbox" checked></input>Soovin teavet E-Toimiku kaudu <a href="https://www.e-toimik.ee/" id="blue">https://www.e-toimik.ee/</a></td>
+							</tr><!-- Table Row -->
+							
+							<tr>
+								<td colspan="4"><input type="checkbox" checked></input>Kõik esitatud andmed on õiged. Olen teadlik, et valeandmete esitamine on karistatav</td>
+							</tr><!-- Table Row -->
+							
+							<td colspan="2" id="muutus">
+								<button type="submit">Kinnita ja allkirjasta ID kaardiga</button>
+							</td><!-- BUTTON -->
+							
+							<td colspan="2" id="muutus">
+								<button type="submit">Kinnita allkirjastamata</button>
+							</td><!-- BUTTON -->	
+						
+
+					<!-- </tbody>				     -->
+
+
+
+				</table>
+			</div>
+<!-- 		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputFile">File input</label>
+		    <input type="file" id="exampleInputFile">
+		    <p class="help-block">Example block-level help text here.</p>
+		  </div>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox"> Check me out
+		    </label>
+		  </div> -->
+
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		<form class="form-horizontal">
+  <fieldset>
+    <legend>Legend</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Radios</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            Option one is this
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Option two can be something else
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Selects</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <br>
+        <select multiple="" class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+	</div>
+</body>
+</html>
