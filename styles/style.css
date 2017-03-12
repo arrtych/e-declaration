@@ -1,5 +1,5 @@
 body{
-	overflow:scroll 
+	overflow:scroll;
 }
 .form-horizontal{
 	padding-bottom: 1em;
@@ -13,10 +13,11 @@ body{
 	padding: 2%;
 }
 .input-style-t{
-	margin-top: 2.7em;
+	margin-top: 4.2em;;
 	padding: 2%;
 }
 .input-style input:hover,
+.btn-hov button:hover,
 .input-style-a input:hover,
 .input-style select:hover,
 .input-style-k textarea:hover,
