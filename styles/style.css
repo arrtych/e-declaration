@@ -38,8 +38,14 @@ body{
 	margin-bottom: 1em;
 	
 }
-.header > h3{
+.header > h3,.header h4{
 	color: #4e4343;
+}
+.add-data{
+	border-right: 2px solid #b7b7b7
+}
+.add-data:last-child{
+	border: 0;
 }
 .checkNouded{
     border-bottom: 1px solid #a7a7a7;
@@ -52,6 +58,7 @@ body{
 .checkToimik >a{
 	color:blue !important;
 }
+
 
 
 
