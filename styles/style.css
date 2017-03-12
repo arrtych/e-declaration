@@ -1,12 +1,48 @@
-form{
-	padding: 2em;
+body{
+	overflow:scroll 
+}
+.form-horizontal{
+	padding: 1em;
+	max-width: 900px;
+	margin: 0 auto;
+	background: #ebebeb;
+
 }
 .input-style{
 	padding: 3%;
 }
-.notifications{
-	padding-top: 1em;
-}
 .required{
 	color:red;
+}
+.teataja-header{
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#999999));
+	background: -moz-linear-gradient(top,  #ededed,  #999999);
+	border-top: 1px solid #dddddd;
+	
+}
+.teataja-header > h3{
+	color: color: #4e4343;;
+}
+
+/*Media styles for aadress and notifications input*/
+@media only screen and (min-width:992px) {
+	.input-style-a{
+		padding: 1.5%;
+	}
+	.notifications{
+		margin-left: 15rem;
+	}
+}
+@media only screen and (max-width: 992px) and (min-width: 0px){
+	.input-style-a{
+		padding: 2.68%;
+	}
+	.notifications{
+		margin-left: 1rem;
+	}
+}
+@media only screen and (max-width: 1200px) and (min-width: 992px){
+	.notifications{
+		margin-left: 14.5rem;
+	}	
 }
