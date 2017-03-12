@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport">
+<!-- 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"> -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
 	<title>Politsei e-avaldus</title>
@@ -15,6 +15,7 @@
 	    	<div class="row header">
 	    		<h3 class="text-center">Teataja</h3>
 	    	</div>
+	    	<!-- Notifications block -->
 	    	<div class="row notification-required">
 	    		<div class=" col-lg-12 notifications">
 	    			<p><span class="required">*</span> - märgitud väljad on kohustuslikud</p>
@@ -28,7 +29,7 @@
 							<div class="form-group input-style">
 							  <label for="inputEesnimi" class="">Eesnimi<span class="required">*</span></label>
 							  <div class="">
-							    <input type="text" class="form-control" id="inputEesnimi" placeholder="Eesnimi">
+							    <input type="text" class="form-control" id="inputEesnimi" required placeholder="Eesnimi">
 							  </div>
 							</div>
 						</div>
@@ -36,7 +37,7 @@
 							<div class="form-group input-style">
 							  <label for="inputPerekonnanimi" class="">Perekonnanimi<span class="required">*</span></label>
 							  <div class="">
-							    <input type="text" class="form-control" id="inputPerekonnanimi" placeholder="Perekonnanimi">
+							    <input type="text" class="form-control" required id="inputPerekonnanimi" placeholder="Perekonnanimi">
 							  </div>
 							</div>
 						</div>
@@ -46,7 +47,7 @@
 							<div class="form-group input-style">
 							  <label for="inputIsikukood" class="">Isikukood<span class="required">*</span></label>
 							  <div class="">
-							    <input type="text" class="form-control" id="inputIsikukood" placeholder="Isikukood">
+							    <input type="text" class="form-control" id="inputIsikukood"  placeholder="Isikukood">
 							  </div>
 							</div>
 						</div>
@@ -58,6 +59,25 @@
 							  </div>
 							</div>
 						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-md-6">
+							<div class="form-group input-style">
+							  <label for="inputEpost" class="">E-post (palun kontrollige, kas sisestasite õige aadressi, muidu on Teile vastamine raskendatud)<span class="required">*</span></label>
+							  <div class="">
+							  <input type="checkbox" checked>Kannatanu on juriidiline isik
+							    <input type="email" class="form-control" id="inputEpost" placeholder="a@aa.ee">
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="form-group input-style-t">
+							  <label for="inputTelefon" class="">Telefon<span class="required">*</span></label>
+							  <div class="">
+							    <input type="text" class="form-control" required id="inputTelefon" placeholder="55555555">
+							  </div>
+							</div>
+						</div>	
 					</div>
 					<div class="row"> 
 						<div class="col-lg-6 col-md-6">
@@ -405,7 +425,7 @@
 							</div>
 						</div>	
 					</div>
-				</div>
+				</div> <!-- col-md-8 col-md-offset-2  end-->
 			</div>
 			<!-- Sundmus block -->
 			<div class="row header">
@@ -434,7 +454,7 @@
 							<div class="form-group input-style">
 							  <label for="inputKahju" class="">Tekitatud kahju(€)</label>
 							  <div class="">
-							    <input type="number" class="form-control" id="inputKahju">
+							    <input type="number" class="form-control" id="inputKahju" >
 							  </div>
 							</div>
 						</div>	
@@ -746,13 +766,38 @@
 							<div class="form-group input-style-k">
 							  <label for="inputSundmuseKirjeldus" class="">Toimunu kirjeldus<span class="required">*</span></label>
 							  <div class="">
-							    <textarea class="form-control" id="inputSundmuseKirjeldus"  rows="3" placeholder="Kirjeldus"></textarea>
+							    <textarea class="form-control" id="inputSundmuseKirjeldus" required rows="3" placeholder="Kirjeldus"></textarea>
 							  </div>
 							</div>
 						</div>
-
 					</div>
 				</div>
+			</div>
+			<!-- TÄIENDAVAD ANDMED block -->
+			<div class="row header">
+				<h3 class="text-center">TÄIENDAVAD ANDMED</h3>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="row">
+						<div class="col-md-12 checkNouded">
+							<input type="checkbox" id="checkNouded" checked> Olen nõus kokkuleppemenetlusega Kokkuleppemenetlus on menetluse liik, mille käigus nõustuvad süüdistatav ja tema kaitsja süüdistuse sisu ja kuriteo kvalifikatsiooni, kuriteoga tekitatud kahju laadi
+ja suurusega ning jõuavad kokkuleppele prokuröri poolt kohtus nõutava karistuse liigis ja määras
+						</div>
+						<div class="col-md-12 checkNouded">
+							<input type="checkbox" id="checkEpost" checked> Olen nõus, et menetlusega seotud dokumendid edastatakse minu poolt antud e-posti aadressile
+						</div>
+						<div class="col-md-12 checkNouded checkToimik">
+							<input type="checkbox" id="checkToimik" checked> Soovin teavet E-Toimiku kaudu <a href="https://www.e-toimik.ee/" class="blue">https://www.e-toimik.ee/</a>
+						</div>
+						<div class="col-md-12 checkNouded">
+							<input type="checkbox" id="checkOigedAndmed" checked> Kõik esitatud andmed on õiged. Olen teadlik, et valeandmete esitamine on karistatav
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				
 			</div>
 
 		</form>

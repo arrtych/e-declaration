@@ -5,13 +5,26 @@ body{
 	padding-bottom: 1em;
 	padding-left: 1em;
 	padding-right: 1em;
-	max-width: 901px;
+	max-width: 990px;
 	margin: 0 auto;
 	background: #ebebeb;
-
 }
 .input-style{
 	padding: 2%;
+}
+.input-style-t{
+	margin-top: 2.7em;
+	padding: 2%;
+}
+.input-style input:hover,
+.input-style-a input:hover,
+.input-style select:hover,
+.input-style-k textarea:hover,
+.input-style-t input:hover{
+/*	background: #f2f2f2;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);*/
+	border: 1px solid black;
 }
 .required{
 	color:red;
@@ -27,6 +40,27 @@ body{
 .header > h3{
 	color: #4e4343;
 }
+.checkNouded{
+    border-bottom: 1px solid #a7a7a7;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+}
+.checkNouded:last-child{
+    border: 0;
+}
+.checkToimik >a{
+	color:blue !important;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*Media styles for aadress and notifications input*/
 @media only screen and (min-width:992px) {
