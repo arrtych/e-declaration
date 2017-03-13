@@ -58,10 +58,24 @@ body{
 .checkToimik >a{
 	color:blue !important;
 }
-
-
-
-
+.modal-style{
+	margin: 0 auto;
+	padding-bottom: 1em;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+}
+.modal-header > h3{
+	color: #4e4343;
+}
+.modall-header{
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#999999));
+	background: -moz-linear-gradient(top,  #ededed,  #999999);
+	border-top: 1px solid #dddddd;
+	margin-bottom: 1em;
+	margin-left: 0px !important; 
+    margin-right: 0px !important;
+	
+}
 
 
 
