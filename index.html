@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="container">
-		<form id="main-form" class="form-horizontal"  name="f1" method="GET" novalidate onsubmit="return validateForm()">
+		<form id="main-form" class="form-horizontal"  name="f1" method="GET"  onsubmit="return validateForm()">
 		<!-- Teataja block -->
 	    	<div class="row header">
 	    		<h3 class="text-center">Teataja</h3>
@@ -47,18 +47,18 @@
 					</div>
 					<div class="row"> 
 						<div class="col-lg-6 col-md-6">
-							<div class="form-group input-style">
+							<div class="form-group input-style isikukood-v">
 							  <label for="inputIsikukood" class="">Isikukood<span class="required">*</span></label>
 							  <div class="">
-							    <input type="text" name="inputIsikukood" class="form-control" id="inputIsikukood"  placeholder="Isikukood">
+							    <input type="text" name="inputIsikukood" required class="form-control" id="inputIsikukood"  placeholder="Isikukood">
 							  </div>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
-							<div class="form-group input-style">
-							  <label for="inputSünniaeg" class="">Sünniaeg<span class="required">**</span></label>
+							<div class="form-group input-style sunniaeg-v">
+							  <label for="inputSunniaeg" class="">Sünniaeg<span class="required">**</span></label>
 							  <div class="">
-							    <input type="date" name="" class="form-control" id="inputSünniaeg" placeholder="Sünniaeg">
+							    <input type="date" name="inputSunniaeg" class="form-control" id="inputSunniaeg" placeholder="Sünniaeg">
 							  </div>
 							</div>
 						</div>
@@ -67,7 +67,7 @@
 						<div class="col-lg-6 col-md-6">
 							<div class="form-group input-style">							  
 							  <div class="">
-							  	<input type="email" class="form-control" id="inputEpost" placeholder="a@aa.ee" required>
+							  	<input type="email" name="email" class="form-control" id="inputEpost" placeholder="a@aa.ee" required>
 							  	<input type="checkbox" checked>Kannatanu on juriidiline isik					
 							  </div>
 							</div>
@@ -83,7 +83,7 @@
 							<div class="form-group input-style">
 							  <label for="inputTelefon" class="">Telefon<span class="required">*</span></label>
 							  <div class="">
-							    <input type="text" class="form-control" required id="inputTelefon" placeholder="">
+							    <input type="text"  name="telefon" class="form-control" required id="inputTelefon" placeholder="">
 							  </div>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
 							<div class="form-group input-style">
 							  <label for="inputKodakondsus" class="">Kodakondsus</label>
 							  <div class="">
-							    <select name="inputKodakondsus" id="inputKodakondsus" class="form-control">
+							    <select name="inputKodakondsus" id="inputKodakondsus" name="inputKodakondsus" class="form-control">
 							    	<option>-</option>
 							        <option>Eesti Vabariik</option>
 							        <option>Afganistan</option>
@@ -363,7 +363,7 @@
 							<div class="form-group input-style-a">
 							  <label for="inputAadress" class="">Elukoha aadress (tänav, maja nr, korter, linn)</label>
 							  <div class="">
-							    <input type="text" class="form-control" id="inputAadress" placeholder="Elukoha aadress (tänav, maja nr, korter, linn)">
+							    <input type="text" name="inputAadress" class="form-control" id="inputAadress" placeholder="Elukoha aadress (tänav, maja nr, korter, linn)">
 							  </div>
 							</div>
 						</div>
@@ -373,7 +373,7 @@
 							<div class="form-group input-style">
 							  <label for="inputSihtnumber" class="">Sihtnumber</label>
 							  <div class="">
-							    <input type="text" class="form-control" id="inputSihtnumber" placeholder="Sihtnumber">
+							    <input type="text" name="inputSihtnumber" class="form-control" id="inputSihtnumber" placeholder="Sihtnumber">
 							  </div>
 							</div>	
 						</div>
@@ -381,7 +381,7 @@
 							<div class="form-group input-style">
 							  <label for="inputMaakond" class="">Maakond</label>
 							  <div class="">
-							    <select name="" id="inputMaakond" class="form-control">
+							    <select name="" id="inputMaakond" name="inputMaakond" class="form-control">
 								    <option>-</option>
 								    <option>&#65279;Harju maakond</option>
 								    <option>Hiiu maakond</option>
@@ -408,7 +408,7 @@
 							<div class="form-group input-style">
 							  <label for="inputKontaktViis" class="">Sobiv viis kontakteerumiseks</label>
 							  <div class="">
-							    <select name="" id="inputKontaktViis" class="form-control">
+							    <select name="" id="inputKontaktViis" name="inputKontaktViis" class="form-control">
 								    <option>e-kiri</option>
 								    <option>telefon</option>
 							    </select>
@@ -419,7 +419,7 @@
 							<div class="form-group input-style">
 							  <label for="inputAeg" class="">Sobiv aeg kontakteerumiseks</label>
 							  <div class="">
-							    <input type="date" class="form-control" id="inputAeg" placeholder="Sobiv aeg kontakteerumiseks">
+							    <input type="date"  name="inputAeg" class="form-control" id="inputAeg" placeholder="Sobiv aeg kontakteerumiseks">
 							  </div>
 							</div>
 						</div>	
@@ -438,7 +438,7 @@
 								<div class="form-group input-style">
 								  <label for="inputToimunuKuupaev" class="">Kuupäev</label>
 								  <div class="">
-								    <input type="date" class="form-control" id="inputToimunuKuupaev" placeholder="Kuupäev">
+								    <input type="date" name="inputToimunuKuupaev" class="form-control" id="inputToimunuKuupaev" placeholder="Kuupäev">
 								  </div>
 								</div>
 							</div>
@@ -446,7 +446,7 @@
 								<div class="form-group input-style">
 								  <label for="inputKellaAeg" class="">Kellaaeg</label>
 								  <div class="">
-								    <input type="time" class="form-control" id="inputKellaaeg" placeholder="Kellaaeg">
+								    <input type="time" name="inputKellaAeg" class="form-control" id="inputKellaaeg" placeholder="Kellaaeg">
 								  </div>
 								</div>
 							</div>
@@ -454,7 +454,7 @@
 								<div class="form-group input-style">
 								  <label for="inputKahju" class="">Tekitatud kahju(€)</label>
 								  <div class="">
-								    <input type="number" class="form-control" id="inputKahju" >
+								    <input type="number" name="inputKahju" class="form-control" id="inputKahju" >
 								  </div>
 								</div>
 							</div>	
@@ -464,7 +464,7 @@
 								<div class="form-group input-style">
 								  <label for="inputPrefektuur" class="">Prefektuur</label>
 								  <div class="">
-								    <select name="" id="inputPrefektuur" class="form-control">
+								    <select name="" id="inputPrefektuur" name="inputPrefektuur" class="form-control">
 									   <option value="selection">Üldine kontakt</option> 
 									   <option value="selection" selected>Põhja prefektuur</option>
 									   <option value="selection">Lõuna prefektuur</option> 
@@ -478,7 +478,7 @@
 								<div class="form-group input-style">
 								  <label for="inputRiik" class="">Riik</label>
 								  <div class="">
-								    <select name="" id="inputRiik" class="form-control">
+								    <select name="inputRiik" id="inputRiik" class="form-control">
 								    	<option>-</option>
 								        <option>Eesti Vabariik</option>
 								        <option>Afganistan</option>
@@ -750,7 +750,7 @@
 								<div class="form-group input-style">
 								  <label for="inputSundmuseAadress" class="">Aadress</label>
 								  <div class="">
-								    <input type="text" class="form-control" id="inputSundmuseAadress" placeholder="Aadress">
+								    <input type="text" name="inputSundmuseAadress" class="form-control" id="inputSundmuseAadress" placeholder="Aadress">
 								  </div>
 								</div>
 							</div>
@@ -758,7 +758,7 @@
 								<div class="form-group input-style">
 								  <label for="inputSundmuseKoht" class="">Toimumise koht</label>
 								  <div class="">
-								    <input type="text" class="form-control" id="inputSundmuseKoht" placeholder="Näiteks: park, kauplus, internet vms">
+								    <input type="text" name="inputSundmuseKoht" class="form-control" id="inputSundmuseKoht" placeholder="Näiteks: park, kauplus, internet vms">
 								  </div>
 								</div>
 							</div>
@@ -766,7 +766,7 @@
 								<div class="form-group input-style-k">
 								  <label for="inputSundmuseKirjeldus" class="">Toimunu kirjeldus<span class="required">*</span></label>
 								  <div class="">
-								    <textarea class="form-control" id="inputSundmuseKirjeldus" required rows="3" placeholder="Kirjeldus"></textarea>
+								    <textarea class="form-control" name="inputSundmuseKirjeldus" id="inputSundmuseKirjeldus" required rows="3" placeholder="Kirjeldus"></textarea>
 								  </div>
 								</div>
 							</div>
@@ -806,7 +806,7 @@
 						      				<div class="form-group input-style">
 						      				  <label for="inputKuupaev" class="">Eseme nimetus</label>
 						      				  <div class="">
-						      				    <input type="text" class="form-control" id="inputSundmuseEsemeNimetus" placeholder="Eseme nimetus">
+						      				    <input type="text"  name="inputSundmuseEsemeNimetus" class="form-control" id="inputSundmuseEsemeNimetus" placeholder="Eseme nimetus">
 						      				  </div>
 						      				</div>
 						      			</div>
@@ -814,7 +814,7 @@
 						      				<div class="form-group input-style">
 						      				  <label for="inputAeg" class="">Soetamise aasta</label>
 						      				  <div class="">
-						      				    <input type="date" class="form-control" id="inputKuupaev" placeholder="Kuupäev">
+						      				    <input type="date" class="form-control" id="inputKuupaev" name="inputKuupaev" placeholder="Kuupäev">
 						      				  </div>
 						      				</div>
 						      			</div>
@@ -822,7 +822,7 @@
 					      					<div class="form-group input-style">
 					      					  <label for="inputKahju" class="">Hindeväärtus(€)</label>
 					      					  <div class="">
-					      					    <input type="number" class="form-control" id="inputKahju" >
+					      					    <input type="number" class="form-control" name="inputKahju" id="inputKahju">
 					      					  </div>
 					      					</div>
 						      			</div>
@@ -835,12 +835,12 @@
 						      			</div>
 						      			<div class="col-lg-4 col-md-4">
 						      				<div class="form-group input-style">
-						      				  <input type="date" class="form-control" id="inputVaraKuupaev">
+						      				  <input type="date" class="form-control" id="inputVaraKuupaev" name="inputVaraKuupaev">
 						      				</div>
 						      			</div>
 						      			<div class="col-lg-4 col-md-4">
 						      				<div class="form-group input-style">
-						      				  <input type="time" class="form-control" id="inputVaraAeg">
+						      				  <input type="time" class="form-control" id="inputVaraAeg" name="inputVaraAeg">
 						      				</div>
 						      			</div>
 						      		</div>
@@ -852,12 +852,12 @@
 						      			</div>
 						      			<div class="col-lg-4 col-md-4">
 						      				<div class="form-group input-style">
-						      				  <input type="date" class="form-control" id="inputVaraKuupaev1">
+						      				  <input type="date" class="form-control" id="inputVaraKuupaev1" name="inputVaraKuupaev1">
 						      				</div>
 						      			</div>
 						      			<div class="col-lg-4 col-md-4">
 						      				<div class="form-group input-style">
-						      				  <input type="time" class="form-control" id="inputVaraAeg1">
+						      				  <input type="time" class="form-control" id="inputVaraAeg1" name="inputVaraAeg1">
 						      				</div>
 						      			</div>
 						      		</div>						      		 
@@ -866,14 +866,14 @@
 						      				<div class="form-group input-style-k">
 						      				  <label for="inputSundmuseKirjeldus" class="">Tundemärgid ja eritunnused (sh raaminumber, seerianumber, IMEI-kood jm)</label>
 						      				  <div class="">
-						      				    <textarea class="form-control" id="inputSundmuseKirjeldus" required rows="3" placeholder="Kirjeldus"></textarea>
+						      				    <textarea class="form-control" id="inputSundmuseKirjeldus1" name="inputSundmuseKirjeldus1" required rows="3" placeholder="Kirjeldus"></textarea>
 						      				  </div>
 						      				</div>
 						      			</div>
 						      		</div>
 						      		<div class="row btns">
-						      			<button type="reset" class="btn btn-default">Reset</button>
-						      			<button type="button" class="btn btn-default">Add</button>						      			
+						      			<button type="reset" name="reset" class="btn btn-default">Reset</button>
+						      			<button type="button" name="add" class="btn btn-default">Add</button>						      			
 						      		</div>
 						      	</div>
 						      </div>
@@ -902,7 +902,7 @@
 							      				<div class="form-group input-style">
 							      				  <label for="inputLisaEesnimi" class="">Eesnimi<span class="required">*</span></label>
 							      				  <div class="">
-							      				    <input type="text" class="form-control" id="inputLisaEesnimi" required placeholder="Eesnimi">
+							      				    <input type="text" class="form-control" id="inputLisaEesnimi" name="inputLisaEesnimi" required placeholder="Eesnimi">
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -910,7 +910,7 @@
 							      				<div class="form-group input-style">
 							      				  <label for="inputLisaPerekonnanimi" class="">Perekonnanimi<span class="required">*</span></label>
 							      				  <div class="">
-							      				    <input type="text" class="form-control" required id="inputLisaPerekonnanimi" placeholder="Perekonnanimi">
+							      				    <input type="text" class="form-control" required id="inputLisaPerekonnanimi" name="inputLisaPerekonnanimi" placeholder="Perekonnanimi">
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -920,7 +920,7 @@
 							      				<div class="form-group input-style">
 							      				  <label for="inputLisaIsikukood" class="">Isikukood<span class="required">*</span></label>
 							      				  <div class="">
-							      				    <input type="text" class="form-control" id="inputLisaIsikukood"  placeholder="Isikukood">
+							      				    <input type="text" class="form-control" id="inputLisaIsikukood" name="inputLisaIsikukood"  placeholder="Isikukood">
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -928,7 +928,7 @@
 							      				<div class="form-group input-style">
 							      				  <label for="inputLisaSünniaeg" class="">Sünniaeg<span class="required">**</span></label>
 							      				  <div class="">
-							      				    <input type="date" class="form-control" id="inputLisaSünniaeg" placeholder="Sünniaeg">
+							      				    <input type="date" class="form-control" id="inputLisaSünniaeg" name="inputLisaSünniaeg" placeholder="Sünniaeg">
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -937,8 +937,8 @@
 							      			<div class="col-lg-6 col-md-6">
 							      				<div class="form-group input-style">					  
 							      				  <div class="">
-							      				  	<input type="email" class="form-control" id="inputLisaEpost" placeholder="a@aa.ee">
-							      				  	<input type="checkbox" checked>Kannatanu on juriidiline isik					
+							      				  	<input type="email" class="form-control" id="inputLisaEpost" name="inputLisaEpost" placeholder="a@aa.ee">
+							      				  	<input type="checkbox" name="checkIsik" checked>Kannatanu on juriidiline isik					
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -953,7 +953,7 @@
 							      				<div class="form-group input-style">
 							      				  <label for="inputTelefon" class="">Telefon<span class="required">*</span></label>
 							      				  <div class="">
-							      				    <input type="text" class="form-control" required id="inputTelefon" placeholder="">
+							      				    <input type="text" class="form-control" required id="inputTelefon" name="inputTelefon" placeholder="">
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -961,7 +961,7 @@
 							      				<div class="form-group input-style">
 							      				  <label for="inputLisaKodakondsus" class="">Kodakondsus</label>
 							      				  <div class="">
-							      				    <select name="" id="inputLisaKodakondsus" class="form-control">
+							      				    <select name="" id="inputLisaKodakondsus" name="inputLisaKodakondsus" class="form-control">
 							      				    	<option>-</option>
 							      				        <option>Eesti Vabariik</option>
 							      				        <option>Afganistan</option>
@@ -1233,7 +1233,7 @@
 							      				<div class="form-group input-style-a">
 							      				  <label for="inputLisaAadress" class="">Aadress (tänav, maja nr, korter, linn)</label>
 							      				  <div class="">
-							      				    <input type="text" class="form-control" id="inputLisaAadress" placeholder="Aadress">
+							      				    <input type="text" class="form-control" id="inputLisaAadress" id="inputLisaAadress" placeholder="Aadress">
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -1287,7 +1287,7 @@
 							      				<div class="form-group input-style">
 							      				  <label for="inputLisaPerekonnanimi" class="">Perekonnanimi<span class="required">*</span></label>
 							      				  <div class="">
-							      				    <input type="text" class="form-control" required id="inputLisaPerekonnanimi" placeholder="Perekonnanimi">
+							      				    <input type="text" class="form-control" required id="inputLisaPerekonnanimi1"  name="inputLisaPerekonnanimi1" placeholder="Perekonnanimi">
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -1608,9 +1608,9 @@
 							      		<div class="row">
 							      			<div class="col-lg-12">
 							      				<div class="form-group input-style-a">
-							      				  <label for="inputLisaAadress" class="">Aadress (tänav, maja nr, korter, linn)</label>
+							      				  <label for="inputLisaAadress1" class="">Aadress (tänav, maja nr, korter, linn)</label>
 							      				  <div class="">
-							      				    <input type="text" class="form-control" id="inputLisaAadress" placeholder="Aadress">
+							      				    <input type="text" class="form-control" name="inputLisaAadress1" id="inputLisaAadress1" placeholder="Aadress">
 							      				  </div>
 							      				</div>
 							      			</div>
@@ -1620,7 +1620,7 @@
 							      				<div class="form-group input-style-k">
 							      				  <label for="inputLisaKirjeldus" class="">Tundemärgid ja eritunnused (sh raaminumber, seerianumber, IMEI-kood jm)</label>
 							      				  <div class="">
-							      				    <textarea class="form-control" id="inputLisaKirjeldus" required rows="3" placeholder="Kirjeldus"></textarea>
+							      				    <textarea class="form-control" id="inputLisaKirjeldus" name="inputLisaKirjeldus" required rows="3" placeholder="Kirjeldus"></textarea>
 							      				  </div>
 							      				</div>
 							      			</div>
