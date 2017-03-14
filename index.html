@@ -3,17 +3,15 @@
 <head>
 	<meta charset="UTF-8">
     <link href="styles/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet">
-	
+    <link href="styles/style.css" rel="stylesheet">	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
-
+    <script src="js/main.js"></script>
 	<title>Politsei e-avaldus</title>
 </head>
 <body>
 	<div class="container">
-		<form class="form-horizontal">
+		<form id="main-form" class="form-horizontal"  name="f1" method="GET" novalidate onsubmit="return validateForm()">
 		<!-- Teataja block -->
 	    	<div class="row header">
 	    		<h3 class="text-center">Teataja</h3>
@@ -31,18 +29,18 @@
 				<div class="col-md-8 col-md-offset-2">
 					<div class="row"> 
 						<div class="col-lg-6 col-md-6">
-							<div class="form-group input-style">
+							<div class="form-group input-style eesnimi-v">
 							  <label for="inputEesnimi" class="">Eesnimi<span class="required">*</span></label>
 							  <div class="">
-							    <input type="text" class="form-control" id="inputEesnimi" required placeholder="Eesnimi">
+							    <input type="text" class="form-control" name="inputEesnimi" id="inputEesnimi" required placeholder="Eesnimi">
 							  </div>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
-							<div class="form-group input-style">
+							<div class="form-group input-style perekonnanimi-v">
 							  <label for="inputPerekonnanimi" class="">Perekonnanimi<span class="required">*</span></label>
 							  <div class="">
-							    <input type="text" class="form-control" required id="inputPerekonnanimi" placeholder="Perekonnanimi">
+							    <input type="text" class="form-control" required id="inputPerekonnanimi" name="inputPerekonnanimi" placeholder="Perekonnanimi">
 							  </div>
 							</div>
 						</div>
@@ -52,7 +50,7 @@
 							<div class="form-group input-style">
 							  <label for="inputIsikukood" class="">Isikukood<span class="required">*</span></label>
 							  <div class="">
-							    <input type="text" class="form-control" id="inputIsikukood"  placeholder="Isikukood">
+							    <input type="text" name="inputIsikukood" class="form-control" id="inputIsikukood"  placeholder="Isikukood">
 							  </div>
 							</div>
 						</div>
@@ -60,7 +58,7 @@
 							<div class="form-group input-style">
 							  <label for="inputSünniaeg" class="">Sünniaeg<span class="required">**</span></label>
 							  <div class="">
-							    <input type="date" class="form-control" id="inputSünniaeg" placeholder="Sünniaeg">
+							    <input type="date" name="" class="form-control" id="inputSünniaeg" placeholder="Sünniaeg">
 							  </div>
 							</div>
 						</div>
@@ -69,7 +67,7 @@
 						<div class="col-lg-6 col-md-6">
 							<div class="form-group input-style">							  
 							  <div class="">
-							  	<input type="email" class="form-control" id="inputEpost" placeholder="a@aa.ee">
+							  	<input type="email" class="form-control" id="inputEpost" placeholder="a@aa.ee" required>
 							  	<input type="checkbox" checked>Kannatanu on juriidiline isik					
 							  </div>
 							</div>
@@ -93,7 +91,7 @@
 							<div class="form-group input-style">
 							  <label for="inputKodakondsus" class="">Kodakondsus</label>
 							  <div class="">
-							    <select name="" id="inputKodakondsus" class="form-control">
+							    <select name="inputKodakondsus" id="inputKodakondsus" class="form-control">
 							    	<option>-</option>
 							        <option>Eesti Vabariik</option>
 							        <option>Afganistan</option>
@@ -1672,10 +1670,10 @@ ja suurusega ning jõuavad kokkuleppele prokuröri poolt kohtus nõutava karistu
 					</div>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-xs-6 text-center btn-hov">
-							<button type="button" class="btn btn-default btn-hov">Kinnita ja allkirjasta ID kaardiga</button>
+							<button type="submit" class="btn btn-default btn-hov">Kinnita ja allkirjasta ID kaardiga</button>
 						</div>
 						<div class="col-lg-6 col-md-6 col-xs-6 text-center btn-hov">
-							<button type="button" class="btn btn-default">Kinnita allkirjastamata</button>
+							<button type="submit" class="btn btn-default">Kinnita allkirjastamata</button>
 						</div>
 					</div>
 				</div>
